@@ -21,7 +21,7 @@ This application lets the user write, save, recall, and delete notes on a webpag
 
 This repository was cloned from code provided by The University of Texas at Austin, for use in their Code Bootcamp - Web Development coursework. All front-end code was provided for the assignment. All server-side code was written by Stephen Trudell.
 
-![A webpage displaying several saved notes to the side, and a note being written in the middle of the page](https://github.com/strudelAndCoffeedo-ly-noted/blob/main/assets/images/demo-screencap-1.png)
+![A webpage displaying several saved notes to the side, and a note being written in the middle of the page](https://github.com/strudelAndCoffee/do-ly-noted/blob/main/assets/images/demo-screencap-1.png)
 
 ## Details
 
