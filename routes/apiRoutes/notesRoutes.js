@@ -45,9 +45,9 @@ router.post("/notes", (req, res) => {
 
 // deletes note from db.json
 router.delete("/notes/:id", (req, res) => {
-    let delNoteId = req.params.id;
+
     let newNotesArr = notes.filter(note => {
-        if (note.id == delNoteId) {
+        if (note.id == req.params.id) {
             return false;
         } else {
             return true;
@@ -59,7 +59,7 @@ router.delete("/notes/:id", (req, res) => {
         JSON.stringify(newNotesArr, null, 2)
     );
 
-    res.send(newNotesArr);
+    res.send(notes);
 });
 
 module.exports = router;
