@@ -59,7 +59,7 @@ router.delete("/notes/:id", (req, res) => {
         JSON.stringify(newNotesArr, null, 2)
     );
 
-    res.send(notes);
+    res.send(newNotesArr);
 });
 
 module.exports = router;
