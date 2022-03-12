@@ -11,12 +11,12 @@ router.get("/notes", (req, res) => {
 // adds new note to db.json
 router.post("/notes", (req, res) => {
 
-    // assigns id to new note
+    // assigns ID to new note
     if (notes.length == 0) {
         // if db is empty
         req.body.id = 1;
     } else {
-        // assigns id equal to current highest id + 1
+        // assigns ID equal to current highest ID + 1
         let notesIDs = [];
         notes.forEach(note => {
             notesIDs.push(note.id);

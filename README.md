@@ -1,12 +1,39 @@
-# Note Taker Starter Code
+# Do-ly Noted Note Taker
 
-## User Story
+![License badge](https://img.shields.io/badge/License-ISC-green)
 
+Just a simple web based note taking app!
+
+Visit the deployed site here:
+
+https://do-ly-noted.herokuapp.com/
+
+## Table of Contents
+
+* [Description](#description)
+* [Details](#details)
+* [Questions](#questions)
+* [License](#license)
+
+## Description
+
+This application lets the user write, save, recall, and delete notes on a webpage. The server persists data as it updates through user interaction. 
+
+This repository was cloned from code provided by The University of Texas at Austin, for use in their Code Bootcamp - Web Development coursework. All front-end code was provided for the assignment. All server-side code was written by Stephen Trudell.
+
+![A webpage displaying several saved notes to the side, and a note being written in the middle of the page](https://github.com/strudelAndCoffeedo-ly-noted/blob/main/assets/images/demo-screencap-1.png)
+
+## Details
+
+*User Story:*
+
+```
 AS A small business owner
 I WANT to be able to write and save notes
 SO THAT I can organize my thoughts and keep track of tasks I need to complete
+```
 
-## Acceptance Criteria
+*Acceptance Criteria:*
 
 ```
 GIVEN a note-taking application
@@ -24,24 +51,12 @@ WHEN I click on the Write icon in the navigation at the top of the page
     THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
 ```
 
-## Description
+## Questions
 
-The application should have a db.json file on the back end that will be used to store and retrieve notes using the fs module.
+For additional questions, you may reach me via email: strudelandcoffee@gmail.com 
 
-The following HTML routes should be created:
+View my GitHub profile: [GitHub profile](https://github.com/strudelAndCoffee)
 
-* ```GET /notes``` should return the notes.html file.
+## License
 
-* ```GET *``` should return the index.html file.
-
-The following API routes should be created:
-
-* ```GET /api/notes``` should read the db.json file and return all saved notes as JSON.
-
-* ```POST /api/notes``` should receive a new note to save on the request body, add it to the db.json file, and then return the new note to the client. You'll need to find a way to give each note a unique id when it's saved (look into npm packages that could do this for you).
-
-## Bonus
-
-You haven’t learned how to handle DELETE requests, but this application has that functionality in the front end. As a bonus, see if you can add the DELETE route to the application using the following guideline:
-
-* ```DELETE /api/notes/:id``` should receive a query parameter containing the id of a note to delete. In order to delete a note, you'll need to read all notes from the db.json file, remove the note with the given id property, and then rewrite the notes to the db.json file.
+This project is licensed under [ISC](https://choosealicense.com/licenses/isc)
