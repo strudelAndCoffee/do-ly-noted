@@ -10,12 +10,20 @@ router.get("/notes", (req, res) => {
 
 // adds new note to db.json
 router.post("/notes", (req, res) => {
-    
-    // checks if id is taken and assigns unique id to note
-    if (notes.some(note => { note.id == notes.length})) {
-        req.body.id = (notes.length + 1);
+
+    // assigns id to new note
+    if (notes.length == 0) {
+        // if db is empty
+        req.body.id = 1;
     } else {
-        req.body.id = notes.length;
+        // assigns id equal to current highest id + 1
+        let notesIDs = [];
+        notes.forEach(note => {
+            notesIDs.push(note.id);
+        });
+        notesIDs.sort().reverse();
+
+        req.body.id = parseInt(notesIDs[0] + 1);
     }
 
     // checks if note's text field is empty
@@ -46,7 +54,12 @@ router.delete("/notes/:id", (req, res) => {
         }
     });
 
-    res.send(newNotesArr);
+    fs.writeFileSync(
+        path.join(__dirname, "../../db/db.json"),
+        JSON.stringify(newNotesArr, null, 2)
+    );
+
+    res.send(notes);
 });
 
 module.exports = router;
