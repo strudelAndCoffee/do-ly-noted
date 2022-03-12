@@ -4,7 +4,7 @@ const fs = require("fs");
 const path = require("path");
 
 router.get("/notes", (req, res) => {
-    res.send(notes);
+    res.json(notes);
 });
 
 router.post("/notes", (req, res) => {

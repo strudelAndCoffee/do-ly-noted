@@ -1,6 +1,11 @@
 [
-    {
-        "title": "test note",
-        "text": "test text"
-    }
+  {
+    "title": "test note",
+    "text": "test text"
+  },
+  {
+    "id": 1,
+    "title": "New Note",
+    "text": "new text"
+  }
 ]
